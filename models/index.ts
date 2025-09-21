@@ -1,6 +1,7 @@
 export interface FipeItem {
-    id: string;
+    codigo: string;
     nome: string;
 }
 
 export interface Marcas extends FipeItem {};
+export interface Modelos extends FipeItem {};
