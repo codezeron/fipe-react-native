@@ -15,5 +15,23 @@ export const styles = StyleSheet.create({
         borderColor: '#333',
         borderWidth: 1,
         borderRadius: 8,
+    },
+    list: {
+      flex: 1,
+      width: '100%',
+      marginTop: 16,
+    },
+    item : {
+      justifyContent: 'center',
+      alignItems: "center",
+      height: 60,
+      flexDirection: "row",
+      paddingLeft: 16,
+      paddingRight: 8,
+      borderWidth: StyleSheet.hairlineWidth,
+      borderColor: '#999'
+    },
+    item_text: {
+      fontWeight: 'bold',
     }
 })
