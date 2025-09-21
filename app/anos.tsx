@@ -1,7 +1,7 @@
 import FipeScreen from "@/components/FipeScreen";
 import { Anos } from "@/models";
 import fetcher from "@/services/fetcher";
-import { useLocalSearchParams } from "expo-router/build/hooks";
+import { router, useLocalSearchParams } from "expo-router";
 import { Text } from "react-native";
 import useSWR from "swr";
 
@@ -9,8 +9,8 @@ export default function AnosScreen() {
 
   const { codigoModelo, codigoMarca } = useLocalSearchParams();
 
-  const goNext = (codigoAnos: string) => {
-
+  const goNext = (codigoAno: string) => {
+    router.push({ pathname: '/veiculo', params: { codigoMarca, codigoModelo, codigoAno } })
   }
 
   const { data, error, isLoading, mutate } = useSWR<Anos[]>

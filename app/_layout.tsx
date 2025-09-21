@@ -21,5 +21,6 @@ export default function RootLayout() {
     }) => ({
       title: `Anos ${route.params?.titulo || ''}`,
     })} />
+    <Stack.Screen name="veiculo" options={{ title: 'Detalhes do Veículo' }} />
   </Stack>;
 }

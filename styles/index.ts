@@ -35,5 +35,9 @@ export const styles = StyleSheet.create({
     },
     item_text: {
       fontWeight: 'bold',
+    },
+    item_detail: {
+      fontWeight: 'bold',
+      fontSize: 20,
     }
 })

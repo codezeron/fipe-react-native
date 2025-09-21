@@ -9,7 +9,9 @@ export default function Index() {
   const goNext = (codigoMarca: string, titulo: string) => {
     router.push({ pathname: '/modelos', params: { codigoMarca, titulo } })
   }
-  const { data, error, isLoading, mutate } = useSWR<Marcas[]>('/carros/marcas', fetcher);
+  const { data, error, isLoading, mutate } = useSWR<Marcas[]>('/carros/marcas', fetcher, {
+    dedupingInterval: 24 * 60 * 60 * 1000
+  });
 
   if (error) return <Text>Error na request, tente novamente</Text>;
 
