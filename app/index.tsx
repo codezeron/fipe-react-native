@@ -6,12 +6,15 @@ import { Text } from "react-native";
 import useSWR from "swr";
 
 export default function Index() {
-  const goNext = (codigo: string) => {
-    router.push({ pathname: '/modelos', params: { codigoModelo: codigo } })
+  const goNext = (codigoMarca: string, titulo: string) => {
+    router.push({ pathname: '/modelos', params: { codigoMarca, titulo } })
   }
   const { data, error, isLoading, mutate } = useSWR<Marcas[]>('/carros/marcas', fetcher);
 
   if (error) return <Text>Error na request, tente novamente</Text>;
 
-  return <FipeScreen data={data} isLoading={isLoading} update={mutate} goNext={goNext} />;
+  return <FipeScreen data={data} isLoading={isLoading} update={mutate} goNext={(codigoMarca) => {
+    const marca = data?.find(item => item.codigo === codigoMarca)
+    goNext(codigoMarca, marca?.nome || '')
+  }} />;
 }

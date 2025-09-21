@@ -13,7 +13,6 @@ interface IFipeScreen {
 }
 
 export default function FipeScreen({ data, isLoading, goNext, update }: IFipeScreen) {
-  console.log(data);
 
   const [searchTerm, setSearchTerm] = useState('');
   const [filterData, setfilterData] = useState<FipeItem[]>([]);

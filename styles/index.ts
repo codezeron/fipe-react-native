@@ -5,6 +5,7 @@ export const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#E4E4E4',
         paddingTop: 16,
+        paddingBottom: 16,
         alignItems: "center",
     },
     input: {
@@ -20,6 +21,7 @@ export const styles = StyleSheet.create({
       flex: 1,
       width: '100%',
       marginTop: 16,
+      marginBottom: 16,
     },
     item : {
       justifyContent: 'center',
