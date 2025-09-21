@@ -48,3 +48,25 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+	
+- [Flash List](https://docs.expo.dev/versions/latest/sdk/flash-list/) - High-performance list component for React Native and Expo.
+  
+  To install Flash List, run the following command:
+  ```bash
+  npx expo install @shopify/flash-list
+  ```
+- [SWR](https://swr.vercel.app/) - React Hooks for data fetching.
+   
+   To install SWR, run the following command:
+   ```bash
+   npm install swr
+   ```
+- [Axios](https://axios-http.com/) - Promise based HTTP client for the browser and node.js.
+   
+   To install Axios, run the following command:
+   ```bash
+   npm install axios
+   ```
+
+- [Fipe API](https://deividfortuna.github.io/fipe/) - API for vehicle price consultation based on the FIPE table.
